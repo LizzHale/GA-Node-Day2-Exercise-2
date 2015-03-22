@@ -48,6 +48,7 @@
 				</div>
 				<div class="margin-top-10 txt-right">
           <a href="/edit/<%=chirp[i].id %>" class="btn btn-primary">Edit Chirp</a>
+          <form method="POST" action="/delete/<%= chirp[i].id%>/?_method=delete"><button type="subit" class="btn btn-danger">Delete Chirp</button></form>
 				</div>
 			</div>
 		</div>

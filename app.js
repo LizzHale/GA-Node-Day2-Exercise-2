@@ -52,3 +52,10 @@ app.put('/edit/:id', function (req, res) {
   });
 });
 
+app.delete('/delete/:id', function (req, res) {
+  models.Chirp.find(req.params.id).done(function(error, chirp) {
+    chirp.destroy().done(function() {
+      res.redirect('/');
+    });
+  });
+});
